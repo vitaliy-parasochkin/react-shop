@@ -11,6 +11,7 @@ If you want to run this project locally, you should:
 As I wrote before, this project has authorization, that is, you should send any username and password of the user from https://dummyjson.com/users, for example:
 
 username: kminchelle
+
 password 0leplR
 
 or something else.
