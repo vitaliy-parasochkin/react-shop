@@ -7,7 +7,7 @@ import Login from "../pages/Login";
 
 export default function Main() {
     return (
-        <BrowserRouter basename="/react-shop/">
+        <BrowserRouter basename="/react-shop">
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<MainLayout />}>
