@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../public/logo.png";
+import Logo from "../images/logo.png";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { logOut } from "../redux/slices/loginSlice";
 
