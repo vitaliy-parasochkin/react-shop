@@ -9,7 +9,7 @@ export default function MainLayout() {
 
     useEffect(() => {
         if (!isAuth) {
-            navigate("/");
+            navigate("/login");
         }
     }, [isAuth, navigate]);
 

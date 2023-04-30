@@ -40,6 +40,7 @@ export const dataSlice = createSlice({
             .addCase(postDataLogin.fulfilled, (state) => {
                 state.isAuth = true;
                 state.error = null;
+                localStorage.setItem("token", "true");
             })
             .addMatcher(isError, (state) => {
                 state.error = "Incorrect data";

@@ -7,12 +7,12 @@ import Login from "../pages/Login";
 
 export default function Main() {
     return (
-        <HashRouter basename="/react-shop">
+        <HashRouter basename="/react-shop/">
             <Routes>
-                <Route path="/" element={<Login />} />
-                <Route element={<MainLayout />}>
-                    <Route path="/products" element={<Products />} />
-                    <Route path="/cart" element={<Cart />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<MainLayout />}>
+                    <Route path="products" element={<Products />} />
+                    <Route path="cart" element={<Cart />} />
                 </Route>
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>
