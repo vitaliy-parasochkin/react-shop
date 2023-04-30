@@ -3,13 +3,14 @@ import Cart from "../pages/Cart";
 import ErrorPage from "../pages/ErrorPage";
 import MainLayout from "../layouts/MainLayout";
 import Login from "../pages/Login";
-import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
+import { createHashRouter } from "react-router-dom";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
     [
         {
             path: "/",
+            element: <Products />,
             errorElement: <ErrorPage />,
             children: [
                 {
