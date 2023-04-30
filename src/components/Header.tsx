@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import Logo from "../../public/logo.png";
-import { useAppSelector } from "../hooks";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { logOut } from "../redux/slices/loginSlice";
 
 const Header: React.FC = () => {
     const { totalPrice, items } = useAppSelector((state) => state.cart);
     const countItemsCart = items.reduce((sum, obj) => obj.count + sum, 0);
+    const dispatch = useAppDispatch();
 
     return (
         <header>
@@ -47,6 +49,12 @@ const Header: React.FC = () => {
                             </svg>
                             <span className="count">{countItemsCart}</span>
                         </Link>
+                        <button
+                            className="outline"
+                            onClick={() => dispatch(logOut())}
+                        >
+                            Logout
+                        </button>
                     </div>
                 </div>
             </div>

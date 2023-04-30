@@ -10,7 +10,7 @@ export default function Products() {
     const { items, loading } = useAppSelector((state) => state.data);
 
     useEffect(() => {
-        dispatch(fetchItems("https://dummyjson.com/products"));
+        dispatch(fetchItems("/products"));
     }, [dispatch]);
 
     return (

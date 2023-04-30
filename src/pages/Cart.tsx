@@ -1,10 +1,10 @@
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import CartProductItem from "../components/CartProductItem";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { setCartItems } from "../redux/slices/cartSlice";
 import * as yup from "yup";
-import React, { useEffect } from "react";
 
 const schema = yup
     .object({

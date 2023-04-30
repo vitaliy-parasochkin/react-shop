@@ -1,5 +1,5 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from "../../api/axios";
 
 type Item = {
     id: string;
@@ -14,21 +14,22 @@ type DataState = {
     items: Item[];
     loading: boolean;
     error: string | null;
+    token: "";
 };
 
 const initialState: DataState = {
     items: [],
     loading: false,
     error: null,
+    token: "",
 };
 
 export const fetchItems = createAsyncThunk<
     Item[],
     string,
     { rejectValue: string }
->("data/fetchItems", async function (pathname, { rejectWithValue }) {
+>("data/fetchItems", async function (pathname) {
     const response = await axios.get(pathname);
-    rejectWithValue("lolkek");
     return response.data.products;
 });
 
@@ -50,10 +51,6 @@ export const dataSlice = createSlice({
                 state.items = action.payload;
                 state.loading = false;
             });
-        // .addCase(fetchItems.rejected, (state, action) => {
-        //     state.items = [];
-        //     state.error = action.payload;
-        // });
     },
 });
 
