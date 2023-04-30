@@ -4,33 +4,26 @@ import ErrorPage from "../pages/ErrorPage";
 import MainLayout from "../layouts/MainLayout";
 import Login from "../pages/Login";
 import { RouterProvider } from "react-router-dom";
-import { createHashRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
-const router = createHashRouter(
+const router = createBrowserRouter(
     [
         {
+            path: "/login",
+            element: <Login />,
+        },
+        {
             path: "/",
-            element: <Products />,
+            element: <MainLayout />,
             errorElement: <ErrorPage />,
             children: [
                 {
-                    path: "/login",
-                    element: <Login />,
+                    path: "products",
+                    element: <Products />,
                 },
-
                 {
-                    path: "/",
-                    element: <MainLayout />,
-                    children: [
-                        {
-                            path: "products",
-                            element: <Products />,
-                        },
-                        {
-                            path: "cart",
-                            element: <Cart />,
-                        },
-                    ],
+                    path: "cart",
+                    element: <Cart />,
                 },
             ],
         },
