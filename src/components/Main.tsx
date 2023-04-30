@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Products from "../pages/Products";
 import Cart from "../pages/Cart";
 import ErrorPage from "../pages/ErrorPage";
@@ -7,7 +7,7 @@ import Login from "../pages/Login";
 
 export default function Main() {
     return (
-        <BrowserRouter basename="/react-shop">
+        <HashRouter basename="/react-shop">
             <Routes>
                 <Route path="/login" element={<Login />} />
                 <Route path="/" element={<MainLayout />}>
@@ -16,6 +16,6 @@ export default function Main() {
                 </Route>
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }

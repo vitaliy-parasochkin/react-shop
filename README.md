@@ -1,9 +1,16 @@
-react-shop is a pet-project small shop with functionality authorization, request to api, view and filter products, added products to cart and posibility create order products.
+react-shop is a small pet-project store with authorization functionality, API request, product browsing and filtering, adding products to the cart and the ability to create product orders.
 
-For project used api from https://dummyjson.com/ . From this site was used api for get array products and request for authorization. Also filter products works by using request.
+API from https://dummyjson.com/ was used for the project. An API was used from this site to retrieve array products and request authorization. The product filter also works with a request.
 
-If you want to run this project local, you should:
-1. download project
-2. In terminal project start command "npm install"
-3. start project with "npm run dev"
+If you want to run this project locally, you should:
 
+1. download the project
+2. In the terminal project, run the command "npm install"
+3. run the project with "npm run dev"
+
+As I wrote before, this project has authorization, that is, you should send any username and password of the user from https://dummyjson.com/users, for example:
+
+username: kminchelle
+password 0leplR
+
+or something else.
