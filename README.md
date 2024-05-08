@@ -2,6 +2,8 @@ React-shop is a small pet-project store with authorization functionality, API re
 
 🔥 API from https://dummyjson.com/ was used for the project. An API was used from this site to retrieve array products and request authorization. The product filter also works with a request. 
 
+Link for open site - https://vitaliy-parasochkin.github.io/react-shop/
+
 🛠 Technologies used to write the project:
 1. React
 2. TypeScript 
